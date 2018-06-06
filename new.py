@@ -28,9 +28,9 @@ Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)  
   
 plt.title("Novelty Detection")  
-plt.contourf(xx, yy, Z, levels=np.linspace(Z.min(), 0, 7), cmap=plt.cm.PuBu)  #»æÖÆÒì³£Ñù±¾µÄÇøÓò  
-a = plt.contour(xx, yy, Z, levels=[0], linewidths=2, colors='darkred')  #»æÖÆÕý³£Ñù±¾ºÍÒì³£Ñù±¾µÄ±ß½ç  
-plt.contourf(xx, yy, Z, levels=[0, Z.max()], colors='palevioletred')   #»æÖÆÕý³£Ñù±¾µÄÇøÓò  
+plt.contourf(xx, yy, Z, levels=np.linspace(Z.min(), 0, 7), cmap=plt.cm.PuBu)  #ç»˜åˆ¶å¼‚å¸¸æ ·æœ¬çš„åŒºåŸŸ  
+a = plt.contour(xx, yy, Z, levels=[0], linewidths=2, colors='darkred')  #ç»˜åˆ¶æ­£å¸¸æ ·æœ¬å’Œå¼‚å¸¸æ ·æœ¬çš„è¾¹ç•Œ  
+plt.contourf(xx, yy, Z, levels=[0, Z.max()], colors='palevioletred')   #ç»˜åˆ¶æ­£å¸¸æ ·æœ¬çš„åŒºåŸŸ  
 s = 40  
 b1 = plt.scatter(X_train[:, 0], X_train[:, 1], c='white', s=s, edgecolors='k')  
 b2 = plt.scatter(X_test[:, 0], X_test[:, 1], c='blueviolet', s=s,  
